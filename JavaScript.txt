@@ -1,0 +1,7 @@
+1. What is Vanilla JS?
+Vanilla JavaScript refers to using plain Javascript without any additional libraries or frameworks. Pure Js. 
+
+2. What is 'use strict'?
+"Use strict" is a directive that indicates that JavaScript code should be executed in the "strict mode." It is placed at the beginning of the code, and the strict mode prohibits certain actions such as using undeclared variables.
+
+3.
