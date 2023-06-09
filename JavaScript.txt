@@ -4,4 +4,26 @@ Vanilla JavaScript refers to using plain Javascript without any additional libra
 2. What is 'use strict'?
 "Use strict" is a directive that indicates that JavaScript code should be executed in the "strict mode." It is placed at the beginning of the code, and the strict mode prohibits certain actions such as using undeclared variables.
 
-3.
+3. What is the difference between var, const, and let?
+Before the release of ECMAScript 6, variables in JavaScript were declared only with the var keyword. Var and let have a lot in common, but the difference is that variables declared with let cannot be redeclared, and most importantly, such variables have block scope. This means they are only accessible within the block {} in which they were created. Var does not have block scope. For example, a variable i declared with var in a for loop will be accessible outside the loop. Const is used to declare constants. Attempting to change the value of a constant will result in an error. This applies only to changing the entire object; we can still modify the fields of an object. As for scope, const behaves like let; there is no difference between them. It is worth mentioning that it is also possible to create a variable without var, let, or const, but it is not recommended, and in such a case, the variable will have global scope.
+
+4. What is ECMAScript 6?
+ECMAScript 6 is a major update to the JavaScript language, dating back to 2015. Its changes are now a standard and widely used everywhere. It introduced features such as let and const, promises, arrow functions, classes, and many other things.
+
+5. What is scope?
+Scope refers to the part of a program where a variable, function, or object can be accessed. This can be a function, a block, or the entire program as a whole, in which case it is called global scope - meaning we are always in at least one scope.
+
+6. Is JavaScript a typed language?
+JavaScript is a loosely typed language, which means you do not explicitly specify the variable type. During program execution, a variable can hold any type of data, and operations are performed based on the variable's type. The result can also be coerced into a different data type (for example, an operation may return a string "5" instead of the number 5). This can sometimes lead to unintended errors in the code. TypeScript, by the way, is designed to address this issue.
+
+7. What is immutability?
+Immutability refers to the state of an object that cannot be changed.
+
+8. How to make an object immutable?
+To make an object immutable, you can use the freeze() method of the object.
+
+9. How to determine if an object is frozen?
+To determine if an object is frozen, meaning it is immutable, you can use the isFrozen() method.
+
+10. What are the data types in JS?
+There are a total of 8 data types in JavaScript. The primitive types are Undefined, Boolean, Number, String, BigInt, and Symbol. There is also a special primitive type called Null, and the object structure.
