@@ -27,3 +27,34 @@ To determine if an object is frozen, meaning it is immutable, you can use the is
 
 10. What are the data types in JS?
 There are a total of 8 data types in JavaScript. The primitive types are Undefined, Boolean, Number, String, BigInt, and Symbol. There is also a special primitive type called Null, and the object structure.
+
+11. How to check if an object is an array?
+To check if an object is an array, you can use the isArray() method. It returns true if the object is an array and false if it is not an array.
+
+12. How to check if a number is finite?
+To determine if a number is finite, you need to make sure it is not infinity (+/-Infinity) and not NaN. You can use the Number.isFinite() method. It returns false if the argument is NaN, positive or negative infinity (Infinity or -Infinity). Otherwise, it returns true.
+
+13. What does the eval() method do?
+The eval() method allows you to execute JavaScript code represented as a string. It returns the value of the executed code provided as a string. If the code doesn't return anything, undefined is returned.
+
+14. How to check if a variable is equal to NaN?
+To check for equality with NaN, you can use the isNaN function. Alternatively, you can use the Number.isNaN() method introduced in ECMAScript 6 or additionally check the literal or variable for a non-numeric value using typeof.
+
+15. What is the difference between isNaN() and Number.isNaN() behavior?
+The global isNaN() function converts the tested value to a number and then checks it.
+The Number.isNaN() method does not convert values to a number and does not return true for any value that is not of the Number type. In general, it is preferable to use the Number.isNaN() method.
+
+16. What is an Immediately Invoked Function Expression (IIFE)?
+It is a JavaScript function that is executed immediately after it is defined.
+
+17. What is destructuring?
+Destructuring is a special assignment syntax that allows you to extract values from arrays or objects into variables in a concise way.
+
+18. What is the difference between the "in" operator and the hasOwnProperty method?
+Every object derived from Object inherits the hasOwnProperty method. This method can be used to determine whether an object has a specified property as its own property. Unlike the "in" operator, this method does not check for property existence in the object's prototype chain.
+
+19. How to check if a substring exists in a string?
+The includes() method checks if a string contains a specified substring and returns true or false accordingly.
+
+20. What is the Temporal Dead Zone?
+The Temporal Dead Zone is a term used to describe a state when variables are not accessible. They are within the scope but not yet declared.
