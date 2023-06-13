@@ -58,3 +58,33 @@ The includes() method checks if a string contains a specified substring and retu
 
 20. What is the Temporal Dead Zone?
 The Temporal Dead Zone is a term used to describe a state when variables are not accessible. They are within the scope but not yet declared.
+
+21. What is a closure in JavaScript?
+A closure is a function that remembers its outer variables and can access them.
+
+22. What are the purposes of the setTimeout and setInterval methods?
+These methods allow you to call a function after a certain delay (in an asynchronous manner). setTimeout executes the function once, while setInterval executes it repeatedly at specified time intervals.
+
+23. What are queues and stacks?
+These are data structures. A stack operates on the last-in, first-out (LIFO) principle, meaning the last item added is the first one to be removed. On the other hand, a queue operates on the first-in, first-out (FIFO) principle, where the first item added is the first one to be removed.
+
+24. How does JavaScript execute code?
+JavaScript executes code synchronously, sequentially, line by line. Before executing a line of code, the interpreter places it in the call stack. The call stack is where the code is parsed and executed. After execution, the line is removed from the stack, and the interpreter moves to the next line.
+
+25. What is the event loop?
+The event loop is an infinite loop in which the JavaScript engine waits for tasks, executes them, and waits for new tasks. The main task of the event loop is to control the call stack and the callback queue. JavaScript remains idle and waits for tasks. Once tasks appear, the engine starts executing them, starting with the first one. If a new task arrives while the engine is busy with the previous task, it is placed in the queue.
+
+26. What are reference types?
+Reference types are objects, including Object, Array, and Function. A variable containing a reference type does not actually contain its value but only a reference to the location in memory where the actual data is stored.
+
+27. How can you clone an object?
+To clone an object, you can use the Object.assign method or the spread operator. However, if you need to clone an object with nested objects, these methods won't work. You can either use a method from a library like Lodash or do it using the built-in JSON object.
+
+28. How can you add an element to the beginning and end of an array?
+To add an element to the beginning of an array, you can use the unshift() method. To add elements to the end, you can use the push() method.
+
+29. What is the difference between undefined and is not defined?
+Undefined is a value assigned to a declared but uninitialized variable. We get undefined when accessing an existing variable. In the case of accessing a non-existent (undeclared) variable, we get an "is not defined" error.
+
+30. What is hoisting in JavaScript?
+Hoisting is a behavior of the JavaScript compiler where variable and function declarations are moved to the top of their scope. Thanks to hoisting, we can use functions and variables before they are declared in the code.
