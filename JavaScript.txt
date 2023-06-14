@@ -88,3 +88,33 @@ Undefined is a value assigned to a declared but uninitialized variable. We get u
 
 30. What is hoisting in JavaScript?
 Hoisting is a behavior of the JavaScript compiler where variable and function declarations are moved to the top of their scope. Thanks to hoisting, we can use functions and variables before they are declared in the code.
+
+31. What is the difference between function expression and function declaration?
+Functions are values. They can be assigned, copied, or declared elsewhere in the code. If a function is declared as a separate statement in the main code flow, it is called a Function Declaration. If a function is created as part of an expression, it is considered a Function Expression. Function Declarations are processed before executing the code block and are visible throughout the block. Functions declared using Function Expressions are created only when the execution flow reaches them.
+
+32. What is a function in JavaScript?
+A function is a "subprogram" that can be called from external (or internal, in the case of recursion) code relative to the function. Like a program itself, a function consists of a sequence of statements called the function body. Values can be passed into a function, and the function can return a value.
+
+33. What is 'this' in JavaScript?
+'this' refers to the scope object during runtime. By default, 'this' points to the global object. In the browser, the expression 'this === window' will be true.
+
+34. How does prototypal inheritance work?
+In JavaScript, everything is an object. These objects are linked through prototype chains, through which methods and properties are inherited. When accessing a property or method of an object, the search first happens on the object itself. If the property is not found, the search is redirected to its prototype, then to the prototype's prototype, and so on until the desired property is found or the prototype chain ends.
+
+35. What is the difference between null and undefined?
+Null literally means "nothing." Undefined is a value that indicates a variable has been declared but not initialized.
+
+36. What is the difference between forEach and map?
+The difference is that forEach simply iterates over an array and executes the provided callback on each iteration, while map creates and returns a new array based on the original array.
+
+37. In what cases are anonymous functions used?
+Anonymous functions are often used as callbacks.
+
+38. What is a callback function?
+A callback function is a function that is supposed to be executed after another function has finished executing.
+
+39. What are higher-order functions?
+In JavaScript, functions can accept other functions as arguments and can also return functions as results. Functions that do this are called higher-order functions.
+
+40. What is the difference between the == and === operators?
+The double equals operator performs type coercion, while the strict equals operator does not.
