@@ -118,3 +118,55 @@ In JavaScript, functions can accept other functions as arguments and can also re
 
 40. What is the difference between the == and === operators?
 The double equals operator performs type coercion, while the strict equals operator does not.
+
+41. What is the difference between promises and callbacks?
+Promises are more flexible in terms of error handling and allow avoiding the callback hell.
+
+42. What is the difference between call and apply?
+Both methods invoke the original method with a modified context, but .call accepts parameters separated by commas, while .apply accepts an array.
+
+43. How does bind work?
+The bind method returns a function relative to which it is called, but with a modified context.
+
+44. What is DOM?
+DOM stands for Document Object Model. In other words, it is the tree of all the page's nodes recognized by the browser during the HTML parsing process. DOM is an interface that allows JavaScript code to interact with the template.
+
+45. How does async/await differ from promises?
+async creates a Promise, and await waits for the promise to be resolved. Essentially, await is just a convenient syntax for then. The async/await construct is a syntactic sugar.
+
+46. What is the purpose of the fetch function?
+The fetch() function is used to send requests to a server, both GET and POST. The method returns a promise with a response object that contains headers and the server's response.
+
+47, What is a ternary operator?
+The ternary operator works with three operands: a condition and two expressions. It returns the first expression if the condition is true and the second expression if the condition is false. It is used as a compact replacement for the conditional if...else statement.
+
+48. What is the difference between the while loop and the do-while loop?
+The while loop checks the condition before each iteration. The do...while loop checks the condition after each iteration.
+
+49. What are the methods of arrays (which you remember)?
+The some() method checks if any element in the array satisfies a condition specified by the provided function.
+The reduce() method takes a function that has an accumulator and a value as arguments. It applies the function to the accumulator and each value in the array, resulting in a single value.
+The every() method checks if all elements in the array satisfy a condition specified by the provided function.
+The map() method takes a function as a parameter and creates a new array with the results of calling the specified function on each element of the array.
+The flat() method takes an array of arrays as an argument and flattens the nested arrays into a single-level array.
+The filter() method takes a function as a parameter and returns a new array containing all elements of the array for which the filtering function was passed with a true value.
+The forEach() method applies a function to each element of the array.
+The findIndex() method takes a function as a parameter and applies it to the array. It returns the index of the found element if it satisfies the condition specified by the argument function. If no element satisfies the condition, it returns -1.
+The find() method returns the value of the first element in the array that satisfies the condition specified by the provided function. Otherwise, it returns undefined.
+The sort() method sorts the elements of an array and returns them.
+The concat() method combines two or more arrays/values and returns a new array.
+The fill() method fills all elements of an array with the same value, from a starting index (default is 0) to an ending index.
+The includes() method returns true if the array contains a specific element, and false otherwise.
+The reverse() method reverses the order of the elements in an array. The first element becomes the last, and the last element becomes the first.
+The flatMap() method applies a function to each element of the array and then flattens the result into a new array. It combines the flat() and map() methods into a single function.
+
+50. What bitwise operators do you know?
+The bitwise operators I'm aware of are:
+Bitwise AND (&)
+Bitwise OR (|)
+Bitwise XOR (^)
+Bitwise NOT (~)
+Left shift (<<)
+Right shift (>>)
+Zero-fill right shift (>>>)
+
