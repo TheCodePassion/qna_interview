@@ -170,3 +170,32 @@ Left shift (<<)
 Right shift (>>)
 Zero-fill right shift (>>>)
 
+51. What are map and set?
+Map is a collection for storing data of any type in the form of key-value pairs, where each value is stored with a unique key that is later used to access that value. The keys can also be of any type. Set is a collection for storing unique values of any type. The same value cannot be added to a Set more than once. Set is an unordered collection, meaning you can add elements to it but cannot retrieve them. Iteration over the elements of a Set is possible.
+
+52. What is the difference between regular functions and arrow functions?
+The value of 'this' inside a regular function dynamically depends on the calling context. Arrow functions do not have their own 'this' and instead, they reference the 'this' of the enclosing function. Arrow functions do not have the 'arguments' array. If an arrow function contains only one statement, it's possible to use an implicit return without using the 'return' keyword. The syntax of arrow functions can be used inside a class, where the 'this' will refer to the class object.
+
+53. What is 'arguments'?
+The 'arguments' object is an array-like object in JavaScript that contains the arguments passed to a function.
+
+54. How is a class different from an object in JavaScript?
+A class represents the description of an object, its state, and behavior, while an object is a specific instance or embodiment of a class.
+
+55. What is a class in JavaScript?
+In JavaScript, a class is a type of function. The 'class' keyword is used to declare classes. Classes are a syntactical sugar over the existing prototypal inheritance mechanism in JavaScript, starting from ECMAScript 6.
+
+56. What is the difference between a class and a function constructor?
+Classes, introduced in ECMAScript 6, are a syntactical sugar over prototypes. In practice, these approaches differ in the level of abstraction, with classes providing a higher level of abstraction, so you don't have to work directly with prototypes.
+
+57. What is Date?
+Date is a class used for working with dates and times. It is used to represent dates in various formats.
+
+58. How can you get the current date?
+You can use the toLocaleString() method, which returns a string representing the specified date according to language-specific conventions.
+
+59. What is the purpose of the 'new' operator?
+The 'new' keyword in JavaScript is used to create an instance of an object that contains the constructor function.
+
+60. What is JavaScript variable interpolation?
+Variable interpolation is a way of combining strings by inserting variable values into a template string using curly braces. For example, Hi, ${name}!.
