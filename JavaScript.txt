@@ -199,3 +199,33 @@ The 'new' keyword in JavaScript is used to create an instance of an object that 
 
 60. What is JavaScript variable interpolation?
 Variable interpolation is a way of combining strings by inserting variable values into a template string using curly braces. For example, Hi, ${name}!.
+
+61. What is concatenation?
+It is simply the operation of joining or combining.
+
+62. What is the purpose of the for...in operator?
+The for...in operator allows you to loop over the enumerable properties of an object, including properties inherited from its prototype. Enumerable properties are properties that a developer adds to an object. Built-in properties, such as the length property of an array, are not iterated over in a for...in loop.
+
+63. Why does typeof null === 'object'?
+In reality, this is a language bug that is unlikely to be fixed due to backward compatibility with previous versions.
+
+64. Can you briefly explain Symbol?
+Symbol is a primitive data type used for creating unique identifiers. Even if symbols have the same name, they are different symbols. Symbols have two main uses: creating "hidden" object properties and modifying the built-in behavior of certain objects.
+
+65. What is a proxy in JavaScript?
+A proxy is a special object that has the "authority to act on behalf of another." The Proxy object allows you to create a proxy for another object and intercept or redefine fundamental operations for that object.
+
+66. What is AJAX?
+AJAX stands for Asynchronous JavaScript and XML. It refers to a set of specific capabilities for sending requests to a server. Despite the name including the letter X (from XML), it's not necessary to use XML. AJAX encompasses any communication with a server without page reloading, organized using JavaScript.
+
+67. What is JSON?
+JSON (JavaScript Object Notation) is a data interchange format used for communication between a web server and a browser.
+
+68. What does JSON.stringify() do?
+When sending data to a server, it needs to be in a special string format. The JSON.stringify() method is used to convert an object into a JSON-formatted string.
+
+69. What is a Garbage Collector?
+A Garbage Collector is responsible for memory management. The main memory management concept in JavaScript is called "reachability." Objects are considered reachable if they are accessible or used. They are guaranteed to be in memory. To make an object unreachable, all references to it need to be removed. Once an object becomes unreachable, it will be deleted from memory.
+
+70. Which values in JS are considered falsy?
+An empty string, 0, null, undefined, NaN, and false.
