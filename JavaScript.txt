@@ -229,3 +229,33 @@ A Garbage Collector is responsible for memory management. The main memory manage
 
 70. Which values in JS are considered falsy?
 An empty string, 0, null, undefined, NaN, and false.
+
+71. What is the difference between attributes and properties?
+An attribute is the initial state in DOM rendering, while a property is the current state.
+
+72. What are cookies in JavaScript?
+Cookies are data stored on the client-side that are set by the server. They are often used for authentication purposes.
+
+73. What are the uses of the break and continue statements in JavaScript?
+The break statement terminates the current iteration and immediately exits the loop. The continue statement ends the current iteration but does not stop the loop.
+
+74. What is the purpose of using labels?
+Labels are used in conjunction with the break and continue statements. They act as an identifier for an enclosing loop or switch statement that can be referenced.
+
+75. What is the difference between parameters and arguments?
+An argument is a specific value that we "pass" to a function when calling it. This value or set of values is assigned to the formal parameters of that function. A parameter is the variable name specified in the function declaration, waiting to be assigned a specific value at the time of function invocation. The value assigned to a parameter is the argument.
+
+76. What is function chaining?
+Function chaining is the process of calling multiple functions on an object in a chain, one after another.
+
+77. What is recursion?
+Recursion occurs when a function calls itself recursively.
+
+78. What is the difference between the spread and rest operators?
+The spread and rest operators have the same syntax. The difference lies in how they are used. With the spread operator, we can pass or spread array data into other data. With the rest operator, we gather all the parameters of a function and place them into an array or extract a portion of the parameters.
+
+79. What are modules?
+Modules allow us to combine and use code from different files, eliminating the need to keep all the code in one large file.
+
+80. What do you know about generators?
+Generators are a type of function in JavaScript. They differ from regular functions in that they can pause their execution, yield an intermediate result, and then resume execution later at an arbitrary point in time.
