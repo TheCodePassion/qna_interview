@@ -259,3 +259,30 @@ Modules allow us to combine and use code from different files, eliminating the n
 
 80. What do you know about generators?
 Generators are a type of function in JavaScript. They differ from regular functions in that they can pause their execution, yield an intermediate result, and then resume execution later at an arbitrary point in time.
+
+81. What is V8 Engine?
+V8 Engine is an open-source engine developed by Google, written in C++. It is used in Node.js. To achieve high program execution speed, V8 translates JavaScript code into more efficient machine code without using an interpreter.
+
+82. What is type coercion in JS?
+Type coercion is the process of converting values from one type to another (e.g., from strings to numbers) in JavaScript.
+
+83. What is currying in JS?
+Currying is the transformation of functions with multiple arguments into a sequence of nested functions, each taking a single argument. After calling such a function with an argument, it returns a new function that expects the next argument, and so on, until it produces the result.
+
+84. What does the try...catch statement do?
+The try...catch statement allows you to execute arbitrary code, but if an error occurs within it, the program won't stop its execution. Instead, it will jump to the catch block where the error can be handled.
+
+85. What is a polyfill?
+A polyfill is a piece of code that enables the use of modern functionality in older browsers that don't support it by default.
+
+86. What is tree shaking?
+Tree shaking is the process of removing unused modules from the code. Such modules are not included in the final build. To determine which modules are used and which are not, the program structure must be based on ES6 modules.
+
+87. What is a regular expression?
+A regular expression is a sequence of characters that forms a search pattern. This pattern can be used to search for data within text, such as substrings within a string.
+
+88. What is a debugger?
+A debugger provides access to debugging functionality available in a specific environment, such as setting breakpoints and control points. If the debugging functionality is not available in the runtime environment, the debugger statement will have no effect on the code execution result.
+
+89. What is the difference between proto and prototype?
+The proto property (an internal hidden property [[Prototype]]) is an object from which an instance inherits fields and methods. On the other hand, the prototype is an object used to create proto when creating an instance using the new keyword.
