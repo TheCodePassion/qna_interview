@@ -286,3 +286,55 @@ A debugger provides access to debugging functionality available in a specific en
 
 89. What is the difference between proto and prototype?
 The proto property (an internal hidden property [[Prototype]]) is an object from which an instance inherits fields and methods. On the other hand, the prototype is an object used to create proto when creating an instance using the new keyword.
+
+90. What is the purpose of the seal() method?
+The seal() method is used to seal an object, preventing the addition of new properties to the object and making all existing properties non-configurable. The values of the existing properties can still be changed as they remain writable.
+
+91. What is the difference between the freeze() and seal() methods?
+Unlike the Object.freeze() method, the Object.seal() method allows for the modification of existing object properties.
+
+92. What is the main difference between the Object.keys(), Object.values(), and Object.entries() methods?
+The Object.keys() method returns the keys of an object, the Object.values() method returns the values of its properties, and Object.entries() returns an array of key/value pairs.
+
+93. What is the purpose of WeakSet?
+WeakSet is used to store a collection of objects with weak references. Such objects are automatically garbage-collected when they become unreachable, meaning that only the key remains in the WeakSet.
+
+94. What is the difference between Set and WeakSet?
+The main difference is that objects stored in a WeakSet have weak references, meaning they are automatically removed once they become unreachable. Other differences include:
+Set can store any value, while WeakSet can only store objects.
+WeakSet does not have a size property.
+WeakSet does not have the methods clear(), keys(), values(), and forEach().
+WeakSet is not an iterable entity.
+
+95. What methods are available in WeakSet?
+WeakSet has the following methods:
+
+add(): adds an object to the collection.
+delete(): removes an object from the collection.
+has(): determines whether an object exists in the collection.
+length(): returns the length of the collection.
+
+96. What is the purpose of WeakMap?
+WeakMap is used to store key/value pairs where the keys have weak references. Such keys are automatically garbage-collected when they become unreachable.
+
+97. What is the difference between Map and WeakMap?
+WeakMap has weak references, meaning the keys are automatically removed when they become unreachable. Additionally, Map can use any value as keys, while WeakMap can only use objects. Other differences include:
+WeakMap does not have a size property.
+WeakMap does not have the methods clear(), keys(), values(), entries(), and forEach().
+WeakMap is not an iterable entity.
+
+98. What methods are available in WeakMap?
+WeakMap has the following methods:
+set(): adds a key/value pair to the object.
+delete(): removes the value associated with a specific key.
+has(): determines whether a value exists for a given key.
+get(): returns the value associated with a specific key.
+
+99. What are accessors?
+Accessors are getters and setters. Getters are used to retrieve the values of an object's properties, while setters are used to set their values.
+
+100. What is CORS and why is it needed?
+CORS stands for Cross-Origin Resource Sharing. It is a mechanism that uses additional HTTP headers to allow a user to obtain permissions to access selected resources from a server on a different origin than the site currently being used.
+
+101. What is XSS?
+XSS stands for Cross-Site Scripting. It is a web vulnerability that allows injecting JavaScript code into a page that was not intended by the developers.
