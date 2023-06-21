@@ -1,0 +1,64 @@
+1. What is the difference between pseudo-classes and pseudo-elements?
+
+Pseudo-classes are used to select elements based on their state or user actions. For example, in the CSS rule "a:hover { color: red; }", the pseudo-class ":hover" 
+selects the "a" element when it is being hovered over by the user. On the other hand, pseudo-elements are used to style specific parts of elements. 
+For example, in the CSS rule "p::before { content: 'Hello, '; font-weight: bold; }", the pseudo-element "::before" adds content before the content of each "p" element.
+
+2. How to use and what is the difference between map and filter in React?
+
+The map() method applies a specified function to each element of an array and creates a new array with the results.
+It returns a new array with the same number of elements as the original one.
+
+The filter() method creates a new array containing only the elements of the original array for which the filter function returns true. For example:
+const evenNumbers = numbers.filter((number) => number % 2 === 0);
+
+You can combine them
+
+3. What are states in React?
+
+In React, states are objects that contain data managed by a component. They are used to store and manage mutable values that can affect the component's rendering and behavior.
+
+4. Difference between class components and functional components?
+
+In short, class components are considered legacy.
+
+5. What are props in React and how do they differ from states?
+
+Props are for passing, states are for receiving.
+Props are for passing, states are for receiving.
+Props are for passing, states are for receiving.
+
+6. What is Inline Conditional Expression?
+
+Its also known as the conditional or ternary operator
+
+7. What is Event Handling?
+
+Event handling in React is the process of attaching functionality or logic to events that occur within React components. 
+When a specific event, such as a click on an element or form submission, occurs, React invokes the corresponding callback function that you have defined. 
+In this function, you can perform the necessary operations, update the component's state, or interact with other components. 
+Event handling in React is done through attributes with names corresponding to the events, such as onClick for the click event or onChange for the value change event.
+
+8. What are keys in React?
+
+Keys in React are special attributes used to identify unique elements in a list of components when they are rendered or updated.
+Either an ID or an index can be used as keys in the map callback.
+
+9. What is dynamic Inputs in React?
+
+Dynamic Inputs in React refer to the ability to create or manage dynamically changing or variable input fields in React components. 
+Dynamic Inputs allow users to add, remove, or modify input fields in a form or other interactive components as needed. Essentially, it is just input into a form.
+
+10. CSS Styles in React (how can they be implemented or what options are there?) 
+
+In a separate file, in the same file, directly in the tag.
+
+11. How is a CSS file different from a module.css?
+
+CSS module files are an approach or methodology used to organize styles in React and other modern JavaScript frameworks.
+In CSS Modules, each CSS file is treated as a separate module with its own namespace. 
+This isolates styles and prevents naming conflicts between different components. Breaking CSS into modules is similar to breaking components.
+
+12. What is the difference between Uncontrolled and Controlled components in React?
+
+Controlled components take their current value as props. Uncontrolled components use onClick, Controlled components use onChange.
