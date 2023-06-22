@@ -62,3 +62,29 @@ This isolates styles and prevents naming conflicts between different components.
 12. What is the difference between Uncontrolled and Controlled components in React?
 
 Controlled components take their current value as props. Uncontrolled components use onClick, Controlled components use onChange.
+
+13. VirtualDom - how does it work? The whole process is called Reconciliation. What is Reconciliation in React?
+
+Reconciliation in React is the process of comparing and updating the Virtual DOM with the actual DOM to efficiently and optimally update the user interface.
+
+14. What is InnerHtml in React?
+
+It is essentially JSX.
+
+15. React Fragment - Adjacent JSX elements (what is it?)
+
+The main element that should be returned from a function.
+
+16. React Stateless (without states) vs Stateful components
+
+In React, components can be classified as stateless (without state) or stateful. The difference between them lies in how they manage data and updates.
+
+17. What is debounce in React?
+
+In React, "debounce" is a technique used to control the frequency of function calls, especially in response to user input events such as key presses or scrolling.
+When a user actively interacts with a React component, events can occur very frequently. For example, when typing quickly on a keyboard, the onChange event may be triggered with every character input. This can lead to excessive performance overhead, especially if event handling requires expensive operations such as sending network requests or updating components in the virtual DOM tree.
+Debounce allows limiting the frequency of function calls by ensuring that a function is only called after a certain period of user inactivity. Instead of immediately invoking the function on every event, debounce creates a delay before calling the function. If another event occurs during this delay, the timer is reset, and the delay starts again. Only after the delay has elapsed, the function is invoked with the latest arguments passed.
+Debounce can be used, for example, to implement autocomplete in a search field. Instead of immediately executing a search query after every character, debounce allows a delay between the user's last input and the actual search execution, reducing the number of unnecessary server requests.
+In React, there are various libraries such as Lodash or React Debounce Input that provide ready-made components or wrapper functions to easily implement debounce in an application.
+You can also implement debounce using a timer.
+
