@@ -39,7 +39,7 @@ When a specific event, such as a click on an element or form submission, occurs,
 In this function, you can perform the necessary operations, update the component's state, or interact with other components. 
 Event handling in React is done through attributes with names corresponding to the events, such as onClick for the click event or onChange for the value change event.
 
-8.  What are keys in React?
+8. What are keys in React?
 
 Keys in React are special attributes used to identify unique elements in a list of components when they are rendered or updated.
 Either an ID or an index can be used as keys in the map callback.
