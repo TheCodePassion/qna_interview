@@ -1,0 +1,181 @@
+1. What is HTML and what is it used for?
+HTML (HyperText Markup Language) is a markup language used for creating and structuring web pages.
+It provides a set of tags that define the structure and content of a page, such as headings, paragraphs, lists, images, etc.
+HTML is used to create the content of web pages, which is then displayed by web browsers.
+
+2. Which doctype is used for HTML5 documents?
+The doctype used for HTML5 documents is as follows: <!DOCTYPE html>. It informs the browser to interpret the document as HTML5.
+
+3. What are the main differences between HTML and XHTML?
+The main differences between HTML and XHTML are:
+Strictness: XHTML is a stricter and cleaner version of HTML. It follows XML rules and requires more precise syntax.
+Syntax: XHTML requires closing tags for all elements and the use of inline elements within block-level elements.
+Extensibility: XHTML supports XML-like syntax, allowing the use of custom tags and defined namespaces.
+
+4. What are opening and closing tags in HTML?
+Opening and closing tags in HTML are used to denote the beginning and end of a specific element. An opening tag looks like <tag>, and a closing tag looks like </tag>.
+Some elements, such as <br> or <img>, do not have a closing tag and are considered self-closing.
+
+5. What are the main differences between block-level and inline elements?
+The main differences between block-level and inline elements are:
+Positioning: Block-level elements (e.g., <div> or <p>) take up the full available horizontal width and start on a new line,
+while inline elements (e.g., <span> or <a>) only take up the necessary width and remain within the same line.
+Nesting: Block-level elements can contain other block-level and inline elements,
+while inline elements can only contain other inline elements.
+Semantics: Block-level elements are used for structuring content, such as creating page sections,
+while inline elements are typically used for formatting or marking up text fragments.
+
+6. How to create a hyperlink in HTML?
+To create a hyperlink in HTML, you use the <a> (anchor) tag. Example: <a href="https://www.example.com">Link</a>.
+The href attribute specifies the URL or path to the target page that will be accessed when the link is clicked.
+
+7. What is the href attribute and what is it used for?
+The href attribute in the <a> tag is used to specify the address (URL) or file path that the hyperlink points to.
+It tells the browser where to navigate when the link is clicked.
+
+8. How to add an image in an HTML document?
+To add an image in an HTML document, you use the <img> tag.
+Example: <img src="image.jpg" alt="Image description">.
+The src attribute specifies the path to the image, and the alt attribute provides a textual description of the image for cases when it cannot be displayed.
+
+9. How to create an unordered list (bullet point list) in HTML?
+To create an unordered list (bullet point list) in HTML, you use the <ul> (unordered list) tag, and for each list item, you use the <li> (list item) tag.
+Example:
+
+<ul>
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ul>
+
+10. How to create an ordered list (numbered list) in HTML?
+To create an ordered list (numbered list) in HTML, you use the <ol> (ordered list) tag, and for each list item, you also use the <li> tag.
+Example:
+
+<ol>
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ol>
+  
+11. How to create a table in HTML?
+Use the <table> tag to create a table in HTML.
+
+12. How to embed a video in an HTML document?
+Use the <video> tag to embed a video in an HTML document.
+
+13. What are semantic elements in HTML?
+Semantic elements in HTML are tags that provide meaning and structure to the document, such as <header>, <nav>, <section>, <article>, <footer>, and others.
+
+14. How to insert a comment in HTML code?
+Use <!-- your comment --> to insert a comment in HTML code.
+
+15. How to create a form in HTML?
+Use the <form> tag to create a form in HTML.
+
+16. What element is used to create an input text field?
+Use the <input> tag with the attribute type="text" to create an input text field.
+
+17. What element is used to create checkboxes?
+Use the <input> tag with the attribute type="checkbox" to create checkboxes.
+
+18. What element is used to create a dropdown list (select)?
+Use the <select> tag to create a dropdown list.
+
+19. How to create a section heading in HTML?
+Use the <h1> to <h6> tags to create section headings in HTML.
+
+20. How to create a horizontal line in HTML?
+Use the <hr> tag to create a horizontal line in HTML.
+
+21. How to create a line break in HTML?
+Use the <br> tag to create a line break in HTML.
+
+22. What are block-level elements?
+Block-level elements in HTML occupy the entire available width and form blocks of content, such as <div>, <p>, <h1>, and others.
+
+23. How to create an inline frame in HTML?
+Use the <iframe> tag to create an inline frame in HTML.
+
+24. How to insert special characters (e.g., &) in HTML?
+Use HTML entities for special characters, for example, & for &  for  and so on.
+
+25. How to include CSS styles in an HTML document?
+Use the <link> tag with the attribute rel="stylesheet" to link an external CSS file, or use the <style> tag for inline CSS styles.
+
+26. What are meta tags and how are they used in HTML?
+Meta tags in HTML are used to provide information about the document, such as encoding, description, keywords, and other metadata.
+
+27. How to set the content language in an HTML document?
+Use the lang attribute in the <html> tag to set the content language in an HTML document, for example, lang="en" for English.
+
+28. How to create a link for sending email in HTML?
+Use the <a> tag with the href attribute "mailto:email_address" to create a link for sending email in HTML.
+
+29. How to set a background image for an element in HTML?
+Use the CSS property background-image to set a background image for an element in HTML.
+
+30. How to create a paragraph of text in HTML?
+Use the <p> tag to create a paragraph of text in HTML.
+  
+31. How to set the font size in HTML?
+Use the CSS property font-size to set the font size in HTML.
+
+32. How to create a tabbed interface using HTML and CSS?
+To create tabs using HTML and CSS, you can use a combination of the <ul>, <li> tags, and CSS styles to create the visual effect of tabs.
+
+33. How to create a dropdown menu using HTML and CSS?
+To create a dropdown menu using HTML and CSS, use a combination of the <ul>, <li> tags, CSS styles, and the CSS property display: none; to control the visibility of
+  the dropdown menu.
+
+34. How to add animation to an HTML document?
+To add animation to an HTML document, you can use CSS animations, CSS transitions, or JavaScript animations.
+
+35. How to embed an audio file in an HTML document?
+Use the <audio> tag to embed an audio file in an HTML document. Specify the path to the audio file in the src attribute.
+
+36. How to include JavaScript scripts in an HTML document?
+Use the <script> tag to include JavaScript scripts in an HTML document. You can specify the path to an external script file or write the script directly inside the 
+  <script> tag.
+
+37. How to create a pie chart using HTML and CSS?
+To create a pie chart using HTML and CSS, you can use a combination of the <div>, <span> tags, and CSS styles to create chart segments and define their sizes and colors.
+
+38. How to create a slider using HTML and CSS?
+To create a slider using HTML and CSS, you can use the <div>, <img>, <ul>, <li> tags, and CSS styles to create the visual effect of a slider and control its behavior.
+
+39. How to make an image a clickable link in HTML?
+Wrap the <img> tag with an <a> tag and set the href attribute to the link you want the image to lead to.
+
+40. How to embed a YouTube video in an HTML document?
+Use the YouTube embed code to insert a video into an HTML document. You can obtain the code from the YouTube video page and insert it into the HTML using the <iframe> tag.
+
+41. How to create a multi-page HTML document?
+To create a multi-page HTML document, create separate HTML files for each page and set up links between them.
+
+42. How to create a dropdown list using HTML and CSS?
+To create a dropdown list using HTML and CSS, use the <select> tag and nested <option> tags, along with CSS styles to customize the appearance of the list.
+
+43. How to embed an interactive Google Maps map in an HTML document?
+To embed an interactive Google Maps map in an HTML document, use the Google Maps JavaScript API and the embed code obtained from the Google Maps website.
+
+44. How to set a background video for an element in HTML?
+Use the CSS property background-video or <video> as a background element to set a background video in HTML.
+
+45. How to create a toggle switch using HTML and CSS?
+Use the <input> tag with the type="checkbox" attribute and apply CSS styles to create the visual effect of a toggle switch.
+
+46. How to automatically refresh a page in HTML?
+Use the <meta> element with the http-equiv="refresh" attribute and specify the time in seconds for the page refresh.
+
+47. How to set metadata for search engines (e.g., keywords and description) in an HTML document?
+Use the <meta> element with the name="keywords" and name="description" attributes to specify keywords and description, respectively.
+
+48. How to create an animated progress bar using HTML and CSS?
+Use the <div> element with CSS styles such as width and background-color, and add animation using CSS animations or pseudo-elements.
+
+49. How to make HTML elements accessible to search engines (SEO)?
+Ensure that your HTML code is semantically correct, use appropriate tags such as <h1>, <p>, <img>, and add relevant attributes such as alt for images.
+
+50. How to set a favicon (site icon) in an HTML document?
+Insert a link to the favicon using the <link> element and the rel="icon" attribute within the <head> section of your HTML document.
