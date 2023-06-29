@@ -1,0 +1,14 @@
+
+Note: Watch Sass (by Ritwick Dey) is required for SASS!
+
+The main difference between SCSS and SASS lies in their syntax. SASS uses a significantly more compact syntax without curly braces and semicolons. 
+In SCSS, the syntax is more similar to regular CSS with curly braces and semicolons. SCSS appeared later than SASS.
+
+SCSS is more fashionable and uses braces (familiar).
+
+Modular approach.
+Variables (appeared before CSS).
+Nested styles for children.
+MIXIN - reusable style components that can accept variables (dynamic + DRY).
+Extend - inheritance (static). Placeholder classes marked with the % symbol.
+Mathematical operators like calc can be used with variables.
