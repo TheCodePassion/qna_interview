@@ -1,0 +1,14 @@
+BEM, which stands for Block-Element-Modifier, is a popular methodology for organizing and structuring CSS code in web development. 
+It provides a systematic approach to naming classes and defining relationships between elements in HTML and CSS.
+
+The key concept of BEM is to break down the user interface into separate components called blocks, which are self-contained and reusable. 
+Each block represents a distinct section or module on the webpage. Blocks are given unique names that describe their purpose or functionality.
+
+Inside each block, there are elements, which are the individual parts that make up the block. 
+Elements are named in relation to their parent block and are separated by a double underscore (__).
+
+Modifiers are used to modify the appearance or behavior of blocks or elements. Modifiers enable different variations of a block or element without duplicating CSS code.
+They are denoted by double hyphens (--).
+
+By using BEM, developers can create modular and maintainable CSS code that is easy to understand, navigate, and modify. 
+The naming conventions and clear structure provided by BEM help in reducing conflicts, improving collaboration, and enhancing the scalability of CSS projects.
