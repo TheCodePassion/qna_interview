@@ -1,0 +1,131 @@
+1. The user has disabled JavaScript in the browser. How can we run code in their browser?
+<noscript>Text</noscript>
+
+2. What is the value of a?
+let a = (1, 5 - 1) * 2
+Here the comma performs a different operation - it evaluates all the operands from left to right and returns the value of the last one. 
+The answer is 8. The correct answer is to use a dot instead.
+
+3. What is the value of res? What will typeof show?
+a = 10
+b = '20'
+let res = a + b
+console.log(res)
+console.log(typeof res)
+The output will be 1020, and the type will be a string. It's due to type conversion.
+
+4. Explain why the expression function foo(){}() throws an error and doesn't work as an IIFE. What should we do?
+The issue here is that the function call parentheses are added immediately after the Function Declaration. 
+However, they can only follow an expression. So we either need to use a Function Expression 
+or wrap the Function Declaration in parentheses to make it an expression.
+
+5. Make the first letter of a string uppercase.
+let s = 'sddaddd'
+function upFirst(str) {}
+console.log(upFirst(s))
+return str[0].toUpperCase() + str.slice(1)
+
+6. Reverse an array.
+let arr = [1, 2, 3, 4, 5]
+console.log(arr)
+arr.reverse()
+
+7. Find the intersection of two arrays.
+let arr1 = [1, 444, 23, 3, 4, 5, 8888, 1337]
+let arr2 = [1337, 12, 455, 3, 4, 5]
+let arr3 = []
+console.log('The common elements are: ' + arr3)
+The idea is to check for each element of the first array if it exists in the second array. This can be easily done using the indexOf() method with the filter() method as follows:
+let arr3 = arr1.filter((x) => arr2.indexOf(x) !== -1)
+
+8. Clone an object.
+let ob = { name: '0day', step: 90,}
+console.log(ob)
+let ob2 = ob
+ob2.name = '1day'
+console.log(ob)
+console.log(ob2)
+let ob2 = {}
+Object.assign(ob2, ob)
+
+9. Find the average age of users.
+let users = [{ gender: 'male', age: 22, }, { gender: 'female', age: 20, }, { gender: 'female', age: 32, }]
+let sumAge = users.reduce((accumulator, currentValue) => {
+return {
+age: accumulator.age + currentValue.age,
+}
+})
+let res = Math.trunc(sumAge.age / users.length)
+console.log(res)
+
+10. Swap the values of a and b.
+let a = 1
+let b = 2
+function swap(a, b) {
+console.log(a)
+console.log(b)
+}
+swap(a, b)
+let temp = num1;
+num1 = num2;
+num2 = temp;
+
+11. Implement a closure.
+const createCounter = () => {
+let counter = 0
+return () => {
+return counter++
+}
+}
+let a = createCounter()
+let b = createCounter()
+a()
+b()
+console.log(a())
+b()
+b()
+console.log(b())
+
+12. Convert the user object to JSON.
+let user = { name: 'Eva', age: 14,}
+let user2 = undefined
+JSON.parse(JSON.stringify(user))
+
+13. How to handle errors in JavaScript?
+console.log(a)
+try {
+console.log(a)
+} catch (err) {
+console.log('Error')
+} finally {
+console.log('Yep')
+}
+
+14. Check if an object is empty
+let ob1 = {}
+let ob2 = { name: 'alive',}
+function isEmpty(obj) {}
+console.log(isEmpty(ob1)) // true
+console.log(isEmpty(ob2)) // false
+Simply iterate through the object's properties in a loop and return false as soon as a property is encountered.
+for (let key in obj) {
+// If the loop body starts executing, it means the object has properties
+return false;
+}
+return true;
+
+15. Implement a function for Fibonacci numbers.
+function fib(n) {}
+console.log(fib(3)) // 2
+console.log(fib(7)) // 13
+console.log(fib(77)) // 5527939700884757
+function fib(n) {
+let a = 1;
+let b = 1;
+for (let i = 3; i <= n; i++) {
+let c = a + b;
+a = b;
+b = c;
+}
+return b;
+}
