@@ -1,0 +1,47 @@
+// Valid Palindrome 
+var isPalindrome = function(s) {
+    
+  s = s.replace(/[^a-zA-Z0-9]/g,'')
+    s = s.toLowerCase()
+    
+    return s == s.split('').reverse().join('')
+};
+
+// Palindrome Number 
+var isPalindrome = function(x) {
+  const str = String(x);
+  const reversedStr = str.split('').reverse().join('');
+  
+  return str === reversedStr;
+
+};
+
+
+// Valid Palindrome II
+var validPalindrome = function(s) {
+    let left = 0;
+    let right = s.length - 1;
+    
+    while (left < right) {
+        if (s[left] !== s[right]) {
+            const case1 = isPalindrome(s, left + 1, right);
+            const case2 = isPalindrome(s, left, right - 1);
+            return case1 || case2;
+        }
+        
+        left++;
+        right--;
+    }
+    return true;
+};
+
+function isPalindrome(s, start, end) {
+    while (start < end) {
+        if (s[start] !== s[end]) {
+            return false;
+        }
+        start++;
+        end--;
+    }
+    return true;
+}
