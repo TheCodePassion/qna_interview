@@ -1,0 +1,40 @@
+// Generate Parentheses
+var generateParenthesis = function(n) {
+    let a = []
+
+    const generate = (open, close, string) => {
+        if(open === n && close ===n )
+        {
+            a.push(string)
+        }
+          if(open < n) generate(open+1, close, string+"(");
+        if(open > close) generate(open, close+1, string+")");
+   
+    }
+    generate (0, 0, "")
+    return a
+};
+
+// Binary Tree Paths
+var binaryTreePaths = function(root) {
+  const result = [];
+
+  function backtrack(node, path) {
+    if (node === null) {
+      return;
+    }
+    path.push(node.val);
+    if (node.left === null && node.right === null) {
+      result.push(path.join("->"));
+    } else {
+      backtrack(node.left, path);
+      backtrack(node.right, path);
+    }
+    path.pop();
+  }
+
+  backtrack(root, []);
+
+  return result;
+
+};
