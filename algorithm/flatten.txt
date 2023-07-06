@@ -1,0 +1,25 @@
+converting multidimensional data sets or data structures into one-dimensional
+
+// Flatten Binary Tree to Linked List 
+
+var flatten = function(root) {
+     if (root === null || (root.left === null && root.right === null)) {
+    return root;
+  }
+
+  if (root.left !== null) {
+    const rightSubtree = root.right;
+    root.right = root.left;
+    root.left = null;
+
+    let rightMost = root.right;
+    while (rightMost.right !== null) {
+      rightMost = rightMost.right;
+    }
+
+    rightMost.right = rightSubtree;
+  }
+
+  flatten(root.right);
+  return root;
+};
