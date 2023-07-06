@@ -1,0 +1,27 @@
+// Maximum Depth of Binary Tree
+
+var maxDepth = function(root) {
+    if(!root) {
+        return 0
+    }
+    function traverse(node, depth) {
+         if (!node.left && !node.right) {
+                return depth; 
+         }
+
+    let leftDepth = 0;
+    let rightDepth = 0;
+
+   if (node.left) {
+      leftDepth = traverse(node.left, depth + 1); 
+    }
+
+    if (node.right) {
+      rightDepth = traverse(node.right, depth + 1); }
+
+    return Math.max(leftDepth, rightDepth); 
+  
+
+    }
+    return traverse(root, 1)
+};
