@@ -1,0 +1,14 @@
+Single responsibility principle
+1 class = 1 task; 1 entity = 1 task
+
+Open-closed principle
+Open for extension, but closed for modification
+
+Liskov Substitution principle
+A derived class should enhance, not replace, the behavior of the base class
+
+Interface segregation principle
+Entities should not depend on methods they don't use
+
+Dependency inversion principle
+High-level modules should not depend on low-level modules; they should depend on abstractions, and abstractions should not depend on details, details should depend on abstractions.
