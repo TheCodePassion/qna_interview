@@ -1,0 +1,14 @@
+Encapsulation - Encapsulation in object-oriented programming (OOP) is a principle that combines data (variables) and methods (functions) that operate on that data into a single object. 
+It provides means to restrict access to the internal state of an object and control its usage from the outside.
+The idea of encapsulation is to hide the internal implementation of an object from the external world and provide only the necessary interface for interacting with the object. 
+As a result, changing the internal implementation of an object should not affect the code that uses that object.
+Encapsulation is achieved using access modifiers such as public, private, and protected, which define the level of access to the members of a class (variables and methods). 
+For example, private variables can only be accessed within the class itself, while public methods can be called from outside the object.
+
+Polymorphism in object-oriented programming (OOP) is the ability of objects of different classes to have the same interface and behave differently based on their type. 
+It allows using a common interface to work with different types of objects, regardless of their specific implementation.
+In a more concise form: Polymorphism is the ability of objects of different types to respond to the same method calls but behave differently according to their own implementation.
+
+Inheritance in object-oriented programming (OOP) is a mechanism that allows a class to inherit properties and methods from another class, known as the base class or superclass.
+As a result, the subclass inherits all the characteristics of the base class and can add its own. This enables the creation of class hierarchies and facilitates code reuse, 
+improving the modularity and flexibility of a program.
