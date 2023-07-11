@@ -1,0 +1,27 @@
+Event Loop
+
+Browser architecture -> User interface -> Browser engine -> Rendering engine -> Networking -> JS interpreter -> UI backend
+
+The event loop is not part of JavaScript itself. It is a mechanism that allows for non-blocking I/O operations. It utilizes the call stack and contains a task queue.
+
+The event loop is provided by the environment.
+
+There are two queues - the event queue (macro tasks) and the task queue (microtasks).
+Promises are always microtasks, about 99% of the time.
+Microtasks > Macro tasks.
+
+Macro tasks include timers, events, and browser-related tasks.
+
+Node.js is a software platform that enables input/output through a C++ API.
+Source code -->(v8 + libuv) --> Machine code.
+
+Node.js is single-threaded, but libuv uses threads.
+
+====
+The Event Demultiplexer in Node.js is a part of the Node.js architecture responsible for managing asynchronous operations and event handling. It is based on the principles of single-threading and non-blocking I/O.
+
+Internally, Node.js utilizes the Event Demultiplexer to track various events occurring in the system, such as network operations, file operations, timers, and others. The demultiplexer monitors different event sources and notifies the application when events occur, allowing it to react to them.
+
+When a Node.js application initiates an asynchronous operation, such as reading a file or making a network request, it registers a callback function that should be called when the operation completes. The Event Demultiplexer then starts monitoring the operation without blocking the main execution thread. When the operation finishes, the demultiplexer notifies the application by invoking the registered callback. Thus, the application can continue executing other tasks instead of waiting for the operation to complete.
+
+The Event Demultiplexer in Node.js enables efficient handling of a large number of concurrent operations and events without blocking the main execution thread. It is the core mechanism that makes Node.js high-performance and scalable when working with asynchronous operations.
