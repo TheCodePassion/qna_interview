@@ -1,0 +1,25 @@
+Binary search is solved in log2n (logarithmic time).
+Binary search only works with sorted arrays.
+
+Linear time means the number of operations is proportional to the number of elements. For example, if there are 4 million elements, it would take 4 million attempts.
+
+Big O notation describes how quickly an algorithm runs in the worst case scenario.
+
+var search = function(nums, target) {
+  let left = 0;
+  let right = nums.length - 1;
+
+  while (left <= right) {
+    const mid = Math.floor((left + right) / 2);
+
+    if (nums[mid] === target) {
+      return mid; 
+    } else if (nums[mid] < target) {
+      left = mid + 1; 
+    } else {
+      right = mid - 1;
+    }
+  }
+
+  return -1; 
+};
