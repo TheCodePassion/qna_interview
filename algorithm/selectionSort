@@ -1,0 +1,30 @@
+Linked lists can be stored anywhere in memory (linked addresses in memory).
+Linked lists are great in situations where data needs to be read sequentially, but if there is a need to move back and forth, it is better not to use them.
+Arrays are suitable for reading in random order.
+
+The position of an element === index.
+There are two types of access - random and sequential.
+Array - random, list - sequential.
+O(n) means that you accessed each element of the list once.
+
+Selection sort O(n2).
+
+// Sort Selection
+var sortPeople = function(names, heights) {
+    const n = names.length;
+
+  for (let i = 0; i < n - 1; i++) {
+    let maxIdx = i;
+
+    for (let j = i + 1; j < n; j++) {
+      if (heights[j] > heights[maxIdx]) {
+        maxIdx = j;
+      }
+    }
+    [names[i], names[maxIdx]] = [names[maxIdx], names[i]];
+    [heights[i], heights[maxIdx]] = [heights[maxIdx], heights[i]];
+  }
+
+  return names;
+
+};
