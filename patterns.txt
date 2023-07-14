@@ -1,0 +1,54 @@
+- Strategy Pattern
+Identify the aspects that vary and encapsulate those aspects to prevent them from affecting the rest of the code.
+Identify the aspects of the application that can change and separate them from those that always remain constant.
+All patterns provide the ability to change a certain part of the system independently of other parts.
+Program at the interface level, not at the implementation level.
+Prefer composition over inheritance.
+The Strategy Pattern defines a family of algorithms, encapsulates each one, and makes them interchangeable. It allows modifying algorithms independently 
+of their usage on the client side.
+
+- Observer Pattern
+The Observer Pattern defines a "one-to-many" relationship between objects, where a change in the state of one object automatically notifies and updates 
+all dependent objects.
+Strive for loose coupling between interacting objects.
+
+- Decorator Pattern
+The Decorator Pattern extends the capabilities of a class.
+Classes should be open for extension but closed for modification.
+The Decorator Pattern dynamically adds new functionalities to an object and provides a flexible alternative to subclassing for extending functionality.
+
+- Factory Pattern
+The Factory Method is responsible for creating objects and encapsulates this operation in a subclass. 
+Thus, the client code in the superclass is decoupled from the object creation code in the subclass.
+The Factory Method Pattern defines an interface for creating an object but allows subclasses to decide which class to instantiate. 
+Therefore, the Factory Method delegates the instantiation operation to subclasses.
+Code should depend on abstractions, not on concrete classes.
+The Abstract Factory Pattern provides an interface for creating families of related or dependent objects without specifying their concrete classes.
+
+- Singleton Pattern
+The Singleton Pattern ensures that a class has only one instance and provides a global point of access to that instance.
+
+- Command Pattern
+The Command Pattern encapsulates a request as an object, thereby allowing parameterizing clients with different requests, queuing or logging requests, 
+and supporting undoable operations.
+
+- Adapter and Facade Patterns
+The Adapter Pattern converts the interface of a class into another interface that clients expect. 
+The adapter enables classes to work together that couldn't otherwise because of incompatible interfaces.
+The Facade Pattern provides a unified interface to a group of interfaces in a subsystem. The facade defines a higher-level interface that makes the subsystem easier to use.
+Principle of Least Knowledge: Communicate only with close friends.
+Template Method Pattern defines the skeleton of an algorithm in a method, deferring some steps to subclasses. Subclasses can override certain parts of 
+the algorithm without changing its structure.
+Don't call us, we'll call you.
+
+- Iterator and Composite Patterns
+The Iterator Pattern provides a mechanism for sequentially iterating over elements of a collection without exposing its internal representation.
+A class should have only one reason to change.
+The Composite Pattern composes objects into tree structures to represent part-whole hierarchies. 
+The composite allows clients to perform uniform operations on individual objects and collections of objects.
+
+- State Pattern
+The State Pattern manages the behavior of an object when its internal state changes. Externally, it appears as if the object changes its class.
+
+- Proxy Pattern
+The Proxy Pattern provides a surrogate object that controls access to another object.
