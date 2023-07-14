@@ -1,0 +1,25 @@
+QuickSort
+
+Divide and conquer - identify the simplest case as the base case. Determine how to reduce the problem to the base case.
+
+QuickSort. Worst case - O(n^2), average case - O(n log n).
+
+var sortArray = function(nums) {
+  if (nums.length <= 1) {
+    return nums;
+  }
+  
+  const pivot = nums[nums.length - 1]; 
+  const left = [];
+  const right = [];
+  
+  for (let i = 0; i < nums.length - 1; i++) {
+    if (nums[i] < pivot) {
+      left.push(nums[i]);
+    } else {
+      right.push(nums[i]); 
+    }
+  }
+  
+  return [...sortArray(left), pivot, ...sortArray(right)];
+}
