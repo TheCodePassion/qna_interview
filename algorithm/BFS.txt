@@ -1,0 +1,40 @@
+The first to come, the first to leave first in, first out first in, first out first in, first out first in, first out first in, first out first in, first out
+
+
+var isSameTree = function(p, q) {
+     if (p === null && q === null) {
+    return true;
+  }
+  
+  if (p === null || q === null || p.val !== q.val) {
+    return false;
+  }
+  
+  const queueP = [p];
+  const queueQ = [q];
+  
+  while (queueP.length > 0 && queueQ.length > 0) {
+    const nodeP = queueP.shift();
+    const nodeQ = queueQ.shift();
+    
+    if (nodeP.val !== nodeQ.val) {
+      return false;
+    }
+    
+    if (nodeP.left !== null && nodeQ.left !== null) {
+      queueP.push(nodeP.left);
+      queueQ.push(nodeQ.left);
+    } else if (nodeP.left !== null || nodeQ.left !== null) {
+      return false;
+    }
+    
+    if (nodeP.right !== null && nodeQ.right !== null) {
+      queueP.push(nodeP.right);
+      queueQ.push(nodeQ.right);
+    } else if (nodeP.right !== null || nodeQ.right !== null) {
+      return false;
+    }
+  }
+  
+  return queueP.length === queueQ.length;
+};
