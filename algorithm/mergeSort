@@ -1,0 +1,80 @@
+// Merge Sort 
+
+class ListNode {
+  constructor(val, next = null) {
+    this.val = val;
+    this.next = next;
+  }
+}
+
+function mergeSort(head) {
+  if (!head || !head.next) {
+    return head;
+  }
+
+  const mid = findMiddle(head);
+  const left = head;
+  const right = mid.next;
+  mid.next = null;
+
+  const sortedLeft = mergeSort(left);
+  const sortedRight = mergeSort(right);
+
+  return merge(sortedLeft, sortedRight);
+}
+
+function findMiddle(head) {
+  let slow = head;
+  let fast = head;
+
+  while (fast.next && fast.next.next) {
+    slow = slow.next;
+    fast = fast.next.next;
+  }
+
+  return slow;
+}
+
+function merge(left, right) {
+  const dummy = new ListNode();
+  let current = dummy;
+
+  while (left && right) {
+    if (left.val < right.val) {
+      current.next = left;
+      left = left.next;
+    } else {
+      current.next = right;
+      right = right.next;
+    }
+    current = current.next;
+  }
+
+  if (left) {
+    current.next = left;
+  } else {
+    current.next = right;
+  }
+
+  return dummy.next;
+}
+
+
+
+// Simpel way 
+if(!head) return null
+
+  const nodes = [];
+
+  while (head) {
+    nodes.push(head);
+    head = head.next;
+  }
+
+  nodes.sort((a, b) => a.val - b.val);
+
+  for (let i = 0; i < nodes.length; i++) {
+    nodes[i].next = nodes[i + 1] || null;
+  }
+
+  return nodes[0];
