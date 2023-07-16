@@ -1,0 +1,5 @@
+MVC stands for Model-View-Controller, and it was introduced in 1978. It is a design pattern that separates interfaces, control, and business logic. The business logic, which includes functionalities like user registration, is encapsulated within the Model.
+
+
+
+
