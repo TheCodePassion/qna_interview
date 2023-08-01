@@ -1,0 +1,181 @@
+-- https://dou.ua/lenta/articles/interview-node-js/?from=comment-digest_post&utm_source=digest-comments&utm_medium=email&utm_campaign=31072023
+
+💡 Junior
+Node.js
+
+1. What is Node.js?
+Node.js is an open-source, server-side JavaScript runtime environment that allows developers to execute JavaScript code outside of a web browser. 
+
+2. What are the main advantages and disadvantages of using Node.js?
+- Advantages of using Node.js:
+Speed and efficiency: Node.js is built on the V8 JavaScript engine, which provides high performance and executes code quickly, leading to faster application development and improved server response times.
+Non-blocking, event-driven architecture: Node.js uses an event loop that allows asynchronous I/O operations, making it efficient in handling concurrent connections and scalable for real-time applications.
+Single language throughout the stack: JavaScript can be used both on the client-side and server-side, allowing developers to work with the same language and share code between the front-end and back-end, 
+reducing the need for context switching.
+Large and active community: Node.js has a vast and active community of developers, which means extensive support, numerous libraries, and frequent updates, making it easier to find solutions 
+to problems and access a wide range of modules.
+Package manager (npm): Node.js comes with npm (Node Package Manager), a powerful tool that enables easy installation, management, and sharing of packages and modules, enhancing code reusability.
+- Disadvantages of using Node.js:
+Not suitable for CPU-intensive tasks: Node.js is designed to excel in I/O-intensive applications, but it may not be the best choice for CPU-intensive tasks due to its single-threaded nature.
+Callback-heavy code: Asynchronous programming in Node.js relies on callbacks, which can lead to complex and nested code structures (known as "callback hell") if not managed properly.
+Immaturity in some areas: While Node.js has grown rapidly, certain areas of the ecosystem may still be less mature or lack adequate documentation and community support.
+Lack of multi-core utilization by default: Node.js runs on a single thread, which means it doesn't natively utilize multiple CPU cores. Developers need to implement additional strategies (e.g., clustering) 
+to leverage multi-core systems effectively.
+Security concerns: Being open-source and widely used, Node.js may become a target for security vulnerabilities. Careful attention should be given to keep dependencies updated and adopt security best practices.
+
+3. For which tasks is Node.js not suitable?
+There are certain tasks for which Node.js might not be the most suitable choice:
+- CPU-Intensive Tasks: Node.js is built on the V8 JavaScript engine, which is excellent for handling I/O operations and asynchronous tasks but not well-suited for CPU-intensive computations. 
+If your application requires heavy computational tasks, such as complex data processing, image manipulation, or video encoding, using Node.js might not be the most efficient option. 
+In such cases, a language like Python, Go, or C++ might be more suitable.
+- Memory-Intensive Applications: While Node.js performs well with many concurrent connections, it may not be the best choice for applications that require a significant amount of memory.
+If your application involves heavy in-memory data processing or caching large datasets, other languages like Java or C++ with more memory management control might be more appropriate.
+- High-Throughput Synchronous Operations: Node.js is inherently single-threaded, and synchronous operations can block the event loop, leading to performance bottlenecks. 
+In scenarios where an application heavily relies on synchronous I/O operations, other languages like Go or Java with multithreading or asynchronous capabilities may be more suitable.
+- Real-Time Data Manipulation: Node.js is excellent at handling real-time web applications using technologies like WebSockets. However, for applications that require low-level data manipulation or hardware interaction, 
+languages like C or C++ might be more suitable due to their performance and direct access to hardware.
+- Complex Multi-Threaded Applications: Node.js, being single-threaded, might not be the best choice for developing complex multi-threaded applications that require extensive parallelism
+and low-level control over threads. In such cases, languages like Java or Go, with strong support for multi-threading, are better options.
+- Enterprise-level ETL (Extract, Transform, Load) Processes: While Node.js can handle ETL processes for smaller projects, for large-scale, complex enterprise-level 
+ETL tasks that involve significant data processing and transformation, specialized ETL tools like Apache Spark or Apache NiFi might be more appropriate.
+- Resource-Intensive Background Jobs: For resource-intensive, long-running background jobs, using a task-specific tool or language like Celery (Python), Sidekiq (Ruby), or Apache Kafka might be more suitable.
+In conclusion, Node.js might not be the best choice for tasks that are CPU-intensive, memory-intensive, require high-throughput synchronous operations, involve complex multi-threading, or necessitate low-level hardware interactions.
+
+4. What are the main components of Node.js?
+- V8 Engine: Node.js is built on the Google V8 JavaScript engine, which is also used in the Chrome web browser. V8 compiles JavaScript code into machine code, making it much faster than traditional interpreters.
+- Libuv: Libuv is a multi-platform, asynchronous I/O (Input/Output) library that provides the foundation for Node.js' non-blocking, event-driven architecture. It handles tasks like networking, file system operations, and timers.
+- Core Modules. NPM 
+- Event Loop: Node.js follows an event-driven, non-blocking I/O model, and the event loop is at the core of this approach. 
+It continuously checks for pending events and executes their corresponding callbacks, making Node.js highly efficient and scalable for handling concurrent connections.
+
+
+5. How does Node.js server handle multiple concurrent client requests with only one thread?
+- Event Loop:
+Node.js relies on an event loop to manage its asynchronous operations. The event loop is a single thread that continuously checks for pending events, executes callbacks, and delegates I/O operations to the system's underlying kernel asynchronously.
+- Non-Blocking I/O:
+When Node.js performs I/O operations, such as reading from a file, making an HTTP request, or querying a database, it does so in a non-blocking manner. Instead of waiting for the operation to complete, Node.js immediately moves on to execute other code, allowing it to handle other client requests while waiting for the I/O operation to finish.
+- Callbacks and Event-Driven Programming:
+Node.js uses callbacks to handle the results of asynchronous operations. When an asynchronous operation completes, it triggers a callback function, which is then executed by the event loop. This allows Node.js to process multiple client requests simultaneously without blocking the execution of other code.
+- Single Thread, Multi-Threaded I/O:
+While the JavaScript code in Node.js is executed in a single thread, the underlying I/O operations are handled by the operating system's multi-threaded I/O capabilities. Node.js leverages this by delegating I/O tasks to the operating system's kernel and handling the responses asynchronously when they are ready.
+- Concurrency through Event Loop:
+Since Node.js can handle many I/O operations simultaneously, it can efficiently manage multiple concurrent client requests. As each request's I/O operation is delegated to the event loop, Node.js can move on to process other requests without waiting for the I/O to complete.
+- Avoiding CPU-Intensive Tasks:
+While Node.js excels at handling I/O-bound tasks and concurrent client requests, it is not well-suited for CPU-intensive tasks that consume the event loop for extended periods. In such cases, the event loop may become blocked, and other client requests may be delayed. To handle CPU-bound tasks efficiently, developers often use techniques like offloading the processing to worker threads or using external services.
+
+
+6. Is it possible to use multiple threads in Node.js? Which modules are used for this purpose?
+Yes, it is possible to use multiple threads in Node.js to perform CPU-intensive tasks more efficiently and avoid blocking the event loop. Node.js provides support for creating and managing multiple threads through the "Worker Threads" module, which was introduced in Node.js version 10.5.0 and is stable from version 12 onward.
+The "Worker Threads" module allows you to create and communicate with additional threads that run in parallel to the main Node.js process. These worker threads can execute CPU-intensive tasks independently, freeing up the main thread to continue processing other tasks, such as handling incoming client requests.
+
+7. Does Node.js interpret or compile program code?
+Node.js uses a combination of interpretation and compilation to execute program code.
+Interpretation:
+Node.js is an interpreter for JavaScript code. When you run a Node.js application, the JavaScript code is read line by line, and the Node.js runtime interprets each line of code and executes it immediately. This interpretation happens at runtime, which means the code is executed on-the-fly without any pre-processing.
+Just-in-Time (JIT) Compilation:
+Node.js also employs Just-in-Time (JIT) compilation to optimize the performance of JavaScript execution. As the code is being interpreted and executed, the Node.js engine analyzes the code and identifies hotspots—sections of code that are executed frequently. It then compiles those hotspots into optimized machine code.
+- So, the flow of execution in a Node.js application generally involves the following steps:
+The Node.js runtime interprets the JavaScript code line by line.
+As hotspots are identified, the V8 engine performs JIT compilation to convert those sections into optimized machine code.
+The optimized machine code is executed, resulting in faster performance for frequently executed parts of the code.
+
+8. How to read large files using Node.js?
+To handle large files, you should use asynchronous methods and read the file in smaller chunks rather than loading the entire file into memory.
+- Choose the Asynchronous Approach:
+Using asynchronous file operations is crucial for handling large files. Asynchronous methods ensure that your Node.js application doesn't block while reading the file and can continue processing other tasks.
+- Use Streams:
+Node.js provides built-in support for streams, which are a mechanism for reading and writing data in chunks. Streams are particularly useful for handling large files as they read data incrementally without loading the entire file into memory.
+- Create a Readable Stream:
+To read a file using streams, you need to create a readable stream. You can use the fs.createReadStream() method to achieve this. The createReadStream() method allows you to specify the file path and options such as encoding, highWaterMark (the size of each chunk), etc.
+- Handle Stream Events:
+Once you have a readable stream, you can listen for specific events to handle the data. The essential events to handle are data, which is triggered when new data chunks are available, and end, which is triggered when the entire file has been read.
+- Process Data in Chunks:
+As the data event is triggered, you'll receive chunks of data. Process the data as needed in each event callback to avoid loading the entire file into memory at once.
+
+9. What are libuv and v8? What are their purposes?
+libuv:
+libuv is a cross-platform, asynchronous I/O library that provides the event loop, which is the foundation for Node.js' non-blocking, event-driven architecture. It abstracts the operating system's underlying I/O capabilities and provides a consistent API for handling events, timers, network operations, and file system operations.
+Purposes of libuv - Event Loop, Asynchronous I/O, Cross-Platform Support, Timers and Event Handling
+V8:
+V8 is an open-source JavaScript engine developed by Google. It is written in C++ and is the heart of Google Chrome's JavaScript execution. Node.js leverages V8 as its JavaScript runtime, allowing it to execute JavaScript code efficiently and with high performance.
+Purposes of V8: JavaScript Execution, Memory Management, Cross-Platform Support, ECMAScript Compliance
+
+10. What is the difference between microtasks and macrotasks? Provide examples of such tasks.
+Microtasks and macrotasks are two types of tasks that are managed by the event loop in JavaScript environments, including Node.js and web browsers.
+Microtasks are tasks with higher priority than macrotasks. Microtasks are tasks with higher priority than macrotasks. Microtasks are tasks with higher priority than macrotasks. 
+When the event loop checks for pending tasks, it first processes all microtasks before moving on to macrotasks. Microtasks are typically used for tasks that need to be executed immediately after the current script finishes, but before the next rendering or I/O event. They allow developers to control the order of execution more precisely.
+Promise callbacks. process.nextTick(). Mutation Observer
+Macrotasks, also known as "tasks" or "callbacks," have lower priority than microtasks. They are added to the macrotask queue, and the event loop processes them after all pending microtasks have been executed. Macrotasks are usually I/O-bound or timer-based operations.
+I/O operations: Reading from or writing to files or sockets.
+Timers: setTimeout, setInterval, and setImmediate.
+Network requests: Fetching data from a remote server using HTTP requests.
+DOM rendering: Handling updates to the DOM and user interface.
+The order of execution for tasks in the event loop is as follows:
+Execute all pending microtasks (Process all microtasks in the microtask queue).
+Execute one macrotask (Dequeue and execute a task from the macrotask queue).
+If there are more microtasks, go back to step 1. Otherwise, continue to the next macrotask (if any).
+
+11. What is a stream?
+A stream is a fundamental concept in Node.js used for handling data efficiently, especially when dealing with large amounts of data or data that arrives or needs to be processed incrementally. Streams provide an abstraction to read or write data in chunks, allowing for lower memory usage and faster processing, as data is processed as soon as it becomes available, instead of waiting for the entire data set to be loaded.
+
+12. What types of streams do you know?
+Readable Stream:
+A readable stream represents a source of data from which you can read data chunk by chunk. Examples of readable streams include reading from files, making HTTP requests, and processing incoming network connections. Readable streams emit events like 'data', 'end', and 'error' to handle the data as it arrives or encounters an error.
+Writable Stream:
+A writable stream represents a destination where you can write data chunk by chunk. Examples of writable streams include writing to files or making HTTP responses. Writable streams can be used to handle incoming data and store it or send it to another location.
+Streams can also be Transform Streams, which are both readable and writable.
+
+13. What is the event loop? What are its components, and how does it work?
+The event loop is a crucial part of Node.js (and other JavaScript environments) that enables non-blocking, asynchronous behavior, making it efficient for handling I/O-bound operations and concurrent tasks. 
+The event loop is responsible for managing the execution of callbacks and events in a continuous loop, ensuring that code runs efficiently without blocking the main thread.
+Components of the Event Loop:
+Call Stack:
+The call stack is a stack data structure that keeps track of function calls in the current execution context. When a function is called, it is pushed onto the stack, and when the function returns, it is popped off the stack. The call stack handles the synchronous execution of code.
+Callback Queue (Task Queue):
+The callback queue is a queue that stores asynchronous callbacks, such as those from I/O operations (e.g., reading from a file, making an HTTP request) or timers (e.g., setTimeout, setInterval). When an asynchronous operation is completed, its callback is placed in the callback queue.
+Microtask Queue (Job Queue):
+The microtask queue is another queue that stores microtasks. Microtasks are used to handle higher-priority tasks that need to be executed immediately after the current operation but before the event loop continues to process other callbacks. Microtasks are typically used for Promise callbacks and other high-priority tasks.
+How the Event Loop Works:
+The event loop runs continuously, checking for tasks in the following order:
+Check for Microtasks:
+Before executing any macrotask (e.g., I/O callback, timer callback), the event loop checks if there are any pending microtasks in the microtask queue. If there are, it executes all microtasks in sequence until the microtask queue is empty.
+Execute Macrotasks (Callback Queue):
+If there are no microtasks or after all microtasks have been executed, the event loop dequeues and executes one macrotask (callback) from the callback queue. This task can be an I/O operation completion callback or a timer callback, among others.
+Perform Rendering (Optional, in the Browser):
+In web browsers, the event loop might include a rendering step, where the browser renders changes to the DOM. This step is omitted in Node.js, which does not handle rendering.
+Repeat:
+After executing a macrotask, the event loop starts again by checking for microtasks, executing macrotasks, and so on, in a continuous loop.
+
+14. What is logging and monitoring?
+Logging is the process of recording information about events, actions, and errors that occur within your Node.js application. Logs are essential for debugging and troubleshooting issues in production environments. Commonly, logs are written to files or sent to centralized logging services, where they can be easily analyzed.
+Monitoring involves the continuous observation of various metrics and performance indicators of your Node.js application during runtime. It helps identify potential bottlenecks, performance issues, and anomalies that may arise in the system. Monitoring allows you to maintain the health and stability of your application by keeping track of various aspects, including:
+
+15. What is the difference between a monolith and a microservice?
+A monolith and a microservice are two different architectural styles used in software development to design and build applications.
+A monolithic architecture refers to an application that is built as a single, large, and interconnected unit. In a monolith, all components, modules, and functionalities of the application are tightly coupled and run as a single process. This means that the entire application is deployed as one unit, and any changes or updates to a specific part of the application require redeploying the entire monolith.
+Advantages of Monolith:
+Simplicity: Developing and deploying a monolith can be simpler and easier compared to a microservices architecture.
+Performance: Monoliths can be more efficient in terms of resource usage because there is less overhead in communication between components.
+Disadvantages of Monolith:
+Scalability: It can be challenging to scale different components independently in a monolith, limiting the ability to handle high loads.
+Maintenance: As the application grows, maintaining and evolving a monolith can become complex and challenging.
+Continuous Deployment: Making frequent updates to a monolithic application can lead to downtimes during the deployment process.
+Microservices:
+Microservices, on the other hand, is an architectural style where an application is divided into a set of loosely coupled and independently deployable services. Each service represents a specific business capability and can be developed, deployed, and scaled independently. These services communicate with each other through APIs, allowing them to work together as part of a larger system.
+Advantages of Microservices:
+Scalability: Microservices allow you to scale specific services independently, making it easier to handle varying loads on different parts of the application.
+Flexibility: Since each microservice is a separate unit, developers can use different technologies, programming languages, and databases that suit the specific requirements of each service.
+Continuous Deployment: Microservices promote continuous deployment practices, enabling faster updates and reducing the risk of downtime during updates.
+Disadvantages of Microservices:
+Complexity: The distributed nature of microservices adds complexity to the system, which can lead to challenges in monitoring, testing, and debugging.
+Overhead: Communication between microservices can introduce additional overhead compared to the more streamlined communication in monoliths.
+Development Effort: Building and managing microservices requires additional effort in terms of design, deployment, and coordination.
+
+16. What is the difference between language keywords like 'string' and 'String'?
+'string':
+In JavaScript, 'string' is not a keyword; it is a primitive data type.
+'String':
+In JavaScript, 'String' is a built-in constructor function for strings. Unlike the 'string' data type, 'String' is an object wrapper for strings. You can use 'String' to create instances of string objects. For example:
+javascript
+const myStringObj = new String("Hello, world!");
+
