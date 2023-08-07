@@ -1,5 +1,4 @@
 -- https://dou.ua/lenta/articles/interview-node-js/?from=comment-digest_post&utm_source=digest-comments&utm_medium=email&utm_campaign=31072023
-
 💡 Junior
 Node.js
 
@@ -296,3 +295,123 @@ In summary:
 && returns the right-hand operand if both operands are truthy.
 || returns the right-hand operand if at least one operand is truthy.
 ?? returns the right-hand operand if the left-hand operand is nullish.
+
+Database
+41. What are databases used for in applications?
+Databases are used to store, organize, and manage large amounts of structured data in applications, enabling efficient data retrieval, manipulation, and analysis.
+
+42. What is ORM and what is it used for?
+ORM (Object-Relational Mapping) is a programming technique that enables developers to interact with a relational database using object-oriented programming concepts. It is used to simplify and automate the conversion between data stored in a database and the objects used in an application's code.
+
+43. What is data migration? Why is it necessary?
+Data migration refers to the process of transferring data from one storage system, format, or location to another. It is necessary for various reasons, including:
+Upgrading Systems: When adopting new technologies, software, or hardware, data needs to be moved from old systems to the new ones.
+Consolidation: Organizations might merge or restructure, requiring data from multiple sources to be combined into a single system.
+Data Center Relocation: Moving data between physical locations during a data center move.
+Database Upgrades: When upgrading a database system, data must be migrated to the new version.
+Platform Changes: Switching platforms (e.g., from on-premises to cloud) requires data migration to the new environment.
+Performance Improvements: Data may be migrated to optimize performance, such as moving to a more efficient database system.
+Data Cleansing: During migration, data can be cleaned, standardized, and transformed.
+Effective data migration ensures data integrity, minimizes downtime, and maintains business continuity during transitions.
+
+44. What is a transaction?
+A transaction is a unit of work or a sequence of operations in a database that is treated as a single, indivisible entity. It represents a logical or physical change to a database and is typically composed of one or more database operations, such as inserts, updates, or deletes.
+Transactions ensure data consistency and integrity by following the ACID properties:
+Atomicity: A transaction is atomic, meaning it is treated as a single operation. It is either completed in its entirety or not at all. If any part of the transaction fails, the entire transaction is rolled back, and the database remains unchanged.
+Consistency: A transaction takes the database from one consistent state to another. It ensures that the data conforms to predefined rules and constraints.
+Isolation: Transactions are executed in isolation from each other. This ensures that concurrent transactions do not interfere with each other's intermediate states, preserving data integrity.
+Durability: Once a transaction is successfully completed, its changes are permanent and are stored in the database, even in the event of system failures.
+Transactions are crucial for maintaining data integrity and reliability in a multi-user, concurrent database environment. They provide a way to ensure that database operations are reliable and predictable, even in the presence of failures or concurrent access by multiple users.
+
+45. How to update the value of a column in a table?
+To update the value of a column in a table, you would typically use an SQL (Structured Query Language) statement called the UPDATE statement.
+
+46. Using what can you filter the Users table based on age?
+You can filter the Users table based on age using an SQL SELECT statement along with a WHERE clause. Here's an example of how you can do it:
+
+WEB
+46. What is Cross-Origin Resource Sharing (CORS)? Where does it occur?
+Cross-Origin Resource Sharing (CORS) is a security feature implemented by web browsers to control and regulate web requests made from one domain (origin) to another. It is a mechanism that allows or restricts web pages hosted on one domain to make requests for resources (such as data or scripts) located on a different domain. CORS prevents potentially malicious websites from making unauthorized requests to other domains on behalf of the user.
+CORS occurs in the context of web browser interactions when an HTTP request is made from a web page on one origin (domain) to a different origin. The browser enforces CORS by including specific headers in the HTTP requests and responses. These headers indicate whether the requested resource should be shared with the requesting origin or not, based on the policies set by the server hosting the resource. If the server's CORS policy allows the request, the browser allows the response to be accessed by the requesting web page. If the server's CORS policy restricts the request, the browser blocks access to the response data, preventing potential security vulnerabilities.
+
+47. How to detect a CORS error in the developer console?
+In the developer console of a web browser, a CORS error can be detected by observing the presence of an error message that typically includes phrases like "Cross-Origin Request Blocked" or "No 'Access-Control-Allow-Origin' header". This error message indicates that the browser has prevented a web page from making a cross-origin request due to CORS restrictions.
+
+48. Name the main HTTP methods of RESTful or CRUD applications.
+The main HTTP methods used in RESTful or CRUD (Create, Read, Update, Delete) applications are commonly referred to as CRUD operations. These methods correspond to the basic actions that can be performed on resources in a system. The main HTTP methods for CRUD operations are:
+POST: Used to create a new resource on the server. It submits data to be processed to a specified resource.
+GET: Used to retrieve data from the server. It requests the representation of a resource's state.
+PUT: Used to update or replace an existing resource on the server. It sends data to modify the resource's state.
+PATCH: Similar to PUT, but used to apply partial modifications to an existing resource. It sends data to update specific fields of the resource.
+DELETE: Used to remove a resource from the server. It requests the removal of the specified resource.
+These HTTP methods map directly to the CRUD operations that are commonly associated with working with data in a RESTful API. They allow clients to interact with server resources in a standardized way, making it easier to design and maintain web services.
+
+49. What is DNS?
+DNS stands for Domain Name System. It is a decentralized system that translates human-readable domain names (like www.example.com) into IP addresses, which computers use to locate and communicate with each other on the internet. In essence, DNS acts as a directory that helps browsers and other applications find the correct servers for the websites and services you want to access.
+
+HTML + CSS
+50. What are the methods of centering an element horizontally and vertically that you know?
+Flexbox: Use display: flex on the parent element and justify-content: center for horizontal centering, and align-items: center for vertical centering.
+CSS Grid: Apply display: grid on the parent element and use place-items: center to center both horizontally and vertically.
+Absolute Positioning: Use position: absolute on the element to be centered and set top, bottom, left, and right properties to 0. Also, set margin: auto to center horizontally.
+Transform: Apply position: relative on the parent, and position: absolute with top: 50% and left: 50% on the element to be centered. Then, use transform: translate(-50%, -50%) to adjust for centering.
+Table Display: Utilize display: table on the parent, and display: table-cell with vertical-align: middle for vertical centering.
+
+51. How to target all links with a ".com" in the href attribute and how to hide such links?
+To target all links with a ".com" in the href attribute and hide them using CSS, you can use the following code:
+a[href*=".com"] {
+  display: none;
+}
+In this code, the a[href*=".com"] selector targets all anchor (<a>) elements with an href attribute containing ".com". The display: none; property is then applied to hide those links.
+
+52. Can you achieve click fixation using HTML + CSS? Provide an example.
+Click fixation, often referred to as "clickjacking," is a malicious technique where a user is tricked into clicking on something different from what they perceive. 
+
+53. What is "collapsing"?
+In the context of web development and CSS, "collapsing" often refers to the behavior of margins and certain layout properties. Let's explore these concepts:
+Collapsing Margins:
+In CSS, adjacent vertical margins of block-level elements can collapse into a single margin under certain conditions. This can happen when two or more elements are stacked vertically with margins between them. The resulting margin is usually the larger of the two margins, not their sum.
+For example, if you have two paragraphs with margins, like this:
+<p>Paragraph 1</p>
+<p>Paragraph 2</p>
+css
+p {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+The space between the paragraphs would be 30px, not the sum of 20px and 30px.
+Collapsing Layout:
+In some cases, elements might collapse in terms of layout. For instance, if an element's content is empty or if it only contains floated elements, it might collapse and not take up any space. This can sometimes lead to unexpected layout behavior.
+It's important to understand these concepts to avoid unexpected spacing or layout issues when working with CSS and HTML. Keep in mind that the behavior of collapsing margins can be influenced by various factors, such as positioning and the presence of certain elements like borders and padding.
+
+54. What will be the distance between these two elements:
+html
+Copy code
+<div style="display: block">
+  <div style="margin-bottom: 25px">AAA</div>
+  <div style="margin-top: 21px">BBB</div>
+</div>
+Will the answer change if you change display: block to display: flex?
+The distance between the two elements will be determined by the collapsing margins. In this case, the larger of the two margins (25px and 21px) will be used as the effective margin between the two elements. The answer will not change if you change display: block to display: flex.
+Here's how the calculation works:
+The first <div> has a margin-bottom of 25px.
+The second <div> has a margin-top of 21px.
+Since these margins are adjacent (i.e., they share a common edge), they will collapse, and the larger margin value (25px) will be used as the effective margin between the two elements.
+So, the distance between the two elements will be 25px, regardless of whether you use display: block or display: flex for the parent <div>.
+In the case of changing display: block to display: flex, the collapsing margin behavior remains the same, and the distance between the elements will still be determined by the larger margin value (25px). The use of display: flex on the parent element won't affect the collapsing margins between these child elements.
+
+55. Why do developers recommend placing scripts before the closing body tag? What happens if you include JS code in the head?
+Placing JavaScript (JS) scripts before the closing </body> tag is a recommended best practice for several reasons:
+Faster Page Load: Browsers render content from top to bottom, and they pause rendering when they encounter a script tag. If you place scripts in the <head> section, the browser might have to download and execute the scripts before continuing to render the rest of the page. This can result in slower perceived page load times for users. By placing scripts at the end of the <body> tag, you ensure that the main content of the page loads and renders first, giving users a faster initial experience.
+Progressive Rendering: Placing scripts before the closing </body> tag allows the browser to render the visible content of the page without being blocked by script execution. This approach enables progressive rendering, where users can see and interact with the content as it loads, even if some dynamic features (handled by scripts) are not yet functional.
+Avoiding Blocking: Browsers generally block the rendering process when they encounter a <script> tag, especially if the script is placed in the <head> section. This can lead to a "render-blocking" effect, where the browser won't continue rendering until the script has been downloaded and executed. Placing scripts at the end of the <body> tag minimizes this effect, allowing for a smoother user experience.
+Improved Page Responsiveness: If you include JavaScript code in the <head> section, the browser must download and execute that code before it starts rendering the rest of the page. This can cause the page to feel less responsive to user interactions until the scripts have completed execution. By placing scripts at the end of the <body> tag, you allow the browser to prioritize rendering the visible content first and then process the scripts afterward.
+
+56. What is the purpose of the defer and async attributes in the script tag?
+The defer and async attributes in the <script> tag control how JavaScript files are downloaded and executed in relation to the HTML parsing and rendering process:
+defer: The defer attribute indicates that the script should be executed after the HTML has been fully parsed, but before the DOMContentLoaded event. It doesn't block the rendering of the page and maintains the order of script execution as they appear in the HTML. It's ideal for scripts that need to be executed in a specific order and can safely be deferred without affecting the page's functionality.
+async: The async attribute indicates that the script is independent and can be downloaded and executed asynchronously. It doesn't block the rendering of the page, and the script will execute as soon as it's downloaded, potentially out of order compared to other scripts. This is useful for non-blocking scripts that don't rely on each other and can run independently.
+In short, defer delays script execution until after the HTML is parsed, while async allows scripts to be downloaded and executed asynchronously without blocking the rendering process.
+
+57. What is the tabindex attribute? Where is it used?
+The tabindex attribute is used in HTML to control the order in which elements receive focus when navigating through a web page using the keyboard. It assigns a numerical value to an element, indicating its position in the keyboard navigation sequence. This helps users who rely on keyboard navigation to move efficiently between interactive elements on a webpage, such as links, form fields, and buttons. The element with a lower tabindex value will be focused first, followed by elements with higher value
