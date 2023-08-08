@@ -1,4 +1,5 @@
 -- https://dou.ua/lenta/articles/interview-node-js/?from=comment-digest_post&utm_source=digest-comments&utm_medium=email&utm_campaign=31072023
+
 💡 Junior
 Node.js
 
@@ -415,3 +416,125 @@ In short, defer delays script execution until after the HTML is parsed, while as
 
 57. What is the tabindex attribute? Where is it used?
 The tabindex attribute is used in HTML to control the order in which elements receive focus when navigating through a web page using the keyboard. It assigns a numerical value to an element, indicating its position in the keyboard navigation sequence. This helps users who rely on keyboard navigation to move efficiently between interactive elements on a webpage, such as links, form fields, and buttons. The element with a lower tabindex value will be focused first, followed by elements with higher value
+
+
+58. Provide an example of code to determine if the variable "myNumber" is divisible by 11 (true if yes, false if not).
+const myNumber = 132; // Replace this with your desired number
+const isMultipleOf11 = myNumber % 11 === 0;
+console.log(isMultipleOf11); // Output will be true if myNumber is divisible by 11, false otherwise
+
+59. How to copy an array to a new variable without reference by key?
+In JavaScript, you can use the spread operator (...) or the Array.from() method to create a shallow copy of an array without referencing the original array.
+const originalArray = [1, 2, 3, 4, 5];
+const newArray = [...originalArray]; // Create a new array with the same elements
+
+60. What will be output to the console?
+const trees = ["xyz", "xxxx", "test", "ryan", "apple"];
+delete trees[3];
+console.log(trees.length);
+console.log(trees[3]);
+The code will output the following to the console:
+5
+undefined
+
+61. You are given: const source = [1, 2, 3, 5, 1, 5, 9, 1, 2, 8]. Create an array without duplicates, and another array containing only the duplicated elements.
+const source = [1, 2, 3, 5, 1, 5, 9, 1, 2, 8];
+
+// Create an array without duplicates using Set
+const uniqueArray = Array.from(new Set(source));
+
+// Create an array containing only the duplicated elements
+const duplicatesArray = source.filter((item, index) => source.indexOf(item) !== index);
+
+console.log("Array without duplicates:", uniqueArray);
+console.log("Array with duplicated elements:", duplicatesArray);
+
+62. Given:
+const obj = {
+    name: "Vova",
+    secondName: "Simba",
+    age: 15,
+    parents: {
+        mother: {
+            name: "Natali",
+            secondName: "Simba",
+            age: 38
+        },
+        father: {
+            name: "Oleg",
+            secondName: "Simba",
+            age: 45,
+            job: "driver"
+        }
+    }
+};
+Task: Using destructuring, declare variables motherName, motherSecondName, motherAge, motherJob, and fatherInitials (an object with the father's name and surname, excluding age and job). If there is no job, set the value to 'unemployed'.
+
+const {
+    parents: {
+        mother: {
+            name: motherName,
+            secondName: motherSecondName,
+            age: motherAge
+        },
+        father: {
+            name: fatherName,
+            secondName: fatherSecondName,
+            job: fatherJob = 'unemployed'
+        }
+    }
+} = obj;
+
+const fatherInitials = {
+    name: fatherName,
+    secondName: fatherSecondName
+};
+
+console.log("Mother's Name:", motherName);
+console.log("Mother's Second Name:", motherSecondName);
+console.log("Mother's Age:", motherAge);
+console.log("Mother's Job:", motherJob);
+console.log("Father's Initials:", fatherInitials);
+
+63. Is there a difference in creating functions? If so, what is it?
+function makeFunc() {}
+let myFunc = function();
+Yes, there is a difference in creating functions between the two examples you provided:
+Here's a summary of the differences:
+Function Declaration:
+Hoisted: Yes, function declarations are hoisted.
+Usage: Can be called before the actual declaration in the code.
+Syntax: function functionName() {}
+Function Expression:
+Hoisted: No, function expressions are not hoisted.
+Usage: Can only be called after the line where the function expression is defined.
+Syntax: let variableName = function() {} or const variableName = function() {}
+In general, both methods serve the purpose of creating functions, but function declarations are often preferred for their hoisting behavior and ease of use, especially when you need to create named functions. Function expressions are more commonly used when you want to assign functions to variables, use them as arguments to other functions, or create anonymous functions for specific use cases.
+
+
+64. What is optional chaining in JS (?.)?
+let array;
+array?.slice(1,3)
+
+if (array?.length) {
+array.slice(1,3)
+}
+Optional chaining is a feature introduced in ECMAScript 2020 (ES11) that allows you to safely access properties or call functions on nested objects without causing an error if an intermediate property is null or undefined. The optional chaining operator ?. is used to perform optional property access or optional function invocation.
+
+65. Write an asynchronous mapping ".map()" of an object using a callback. Note that the callback function is asynchronous, and asyncObjectMap should return an object, not a promise.
+async function asyncObjectMap(obj, callback) {
+  const result = {};
+  const keys = Object.keys(obj);
+
+  for (const key of keys) {
+    result[key] = await callback(obj[key]);
+  }
+
+  return result;
+}
+
+const mappedObject = await asyncObjectMap({ qwe: 123, fds: 32 }, async (x) => x * 2);
+// => { qwe: 246, fds: 64 }
+
+
+
